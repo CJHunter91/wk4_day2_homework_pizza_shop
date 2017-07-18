@@ -31,7 +31,9 @@ get '/pizzas/:id' do
   erb(:show_order)
 end
 #EDIT
-
+get '/pizzas/:id/edit' do
+  @users_pizza = Pizza.find(params[:id])
+end
 #UPDATE
 
 #DELETE

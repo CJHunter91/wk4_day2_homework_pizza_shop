@@ -4,9 +4,7 @@
 
   <p>Name: <%= pizza.pretty_name %> </p>
   <p>Order: <%= pizza.quantity %> x <%= pizza.topping%></p>
-  <form method="post" action="/pizzas/<%=pizza.id%>">
-    <input type="submit" name="show" value="Show">
-  </form>
+  <button><a href="/pizzas/<%=pizza.id%>">Show</a></button>
  <form>
    <input type="submit" name="edit" value="Edit">
  </form>

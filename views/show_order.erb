@@ -2,3 +2,8 @@
 
 <p>You order is currently being made. You may still be able to change it.</p>
 
+<p>Name: <%= @users_pizza.pretty_name %> </p>
+<p>Order: <%= @users_pizza.quantity %> x <%= @users_pizza.topping%></p>
+
+<button><a href="/pizzas/<%=pizza.id%>/edit>"</a>Edit</button>
+

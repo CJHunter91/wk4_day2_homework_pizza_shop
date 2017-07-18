@@ -36,6 +36,15 @@ get '/pizzas/:id/edit' do
   erb(:edit_pizza)
 end
 #UPDATE
+post '/pizzas/:id' do
+  @users_pizza = Pizza.find(params[:id])
+  @users_pizza.first_name = params['first_name']
+  @users_pizza.last_name = params['last_name']
+  @users_pizza.topping = params['topping']
+  @users_pizza.quantity = params['quantity'].to_i
+  @users_pizza.update
+  redirect '/pizzas'
+end
 
 #DELETE
 post '/pizzas/:id/delete' do

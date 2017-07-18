@@ -33,6 +33,7 @@ end
 #EDIT
 get '/pizzas/:id/edit' do
   @users_pizza = Pizza.find(params[:id])
+  erb(:edit_pizza)
 end
 #UPDATE
 

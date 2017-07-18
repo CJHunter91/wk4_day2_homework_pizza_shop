@@ -1,0 +1,26 @@
+<h1>Create a new order</h1>
+
+<form method="post" action="/pizzas/">
+<label>First Name:</label>
+<input type="text" name="first_name" placeholder="<%= @users_pizza.first_name %>">
+
+<label>Surname:</label>
+<input type="text" name="last_name" placeholder="<%= @users_pizza.last_name %>">
+
+<label>Toppings</label>
+<select name="topping">
+  <option value="<%= @users_pizza.topping %>" disabled selected><%= @users_pizza.topping %></option>
+  <option value="Pepperoni">Pepperoni</option>
+</select>
+
+<label>Quantity</label>
+<select name="quantity">
+  <option value="<%= @users_pizza.quantity %>" disabled selected><%= @users_pizza.quantity %></option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+</select>
+
+<input type="submit" name="submit">
+  
+
+</form>
